@@ -15,7 +15,7 @@ It's no secret that [Urlscan.io](https://urlscan.io) can provide valuable target
 
 However, when faced with a target domain with more than 500 results, pinpointing sensitive URLs can be daunting. I spent more time than I should have working through large search responses. This prompted me to develop the scripts outlined below, which have saved me quite a bit of time. If your target domain yields fewer than 500 entries, it's more efficient to review the entries manually, either through the Urlscan.io search or using GAU.
 
-A typical [search](https://urlscan.io/search/#*) query might look like `page.domain:(targetdomain.com).` A more verbose alternative is `domain:(targetdomain.com)` but this will also include redirect URLs, potentially taking you out of your intended scope. For clarity, the scripts provided here exclusively utilize page.domain.
+A typical [search](https://urlscan.io/search/#*) query might look like `page.domain:(targetdomain.com)`. A more verbose alternative is `domain:(targetdomain.com)` but this will also include redirect URLs, potentially taking you out of your intended scope. For clarity, the scripts provided here exclusively utilize page.domain.
 
 # *The fetch.py and scan.py scripts are located here: [https://github.com/Moopinger/URLScanScripts](https://github.com/Moopinger/URLScanScripts)*
 
