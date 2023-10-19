@@ -51,7 +51,7 @@ optional arguments:
 
 {% endhighlight %}
 
-Run against testing.com:
+Run against mozilla.com:
 
 {% highlight python %}
 > python3 fetch.py -d mozilla.com
