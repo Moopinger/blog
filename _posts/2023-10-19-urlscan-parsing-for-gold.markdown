@@ -92,7 +92,7 @@ Similarly info mode can be used to return a count of each extension and subdomai
 
 ![info mode domains](/blog/assets/infomode-1.png){: width="400" }
 
-Extenstions:
+Extensions:
 
 ![info mode domains](/blog/assets/infomode-2.png){: width="300" }
 
