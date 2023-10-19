@@ -122,5 +122,5 @@ interesting_words = ['sql','api','swagger','tomcat','edit','upload','admin','pas
 After running this script against a large number of domains with public bounty programs, I compiled a somewhat decent subdomain wordlist (119K). It's available for download at: [https://github.com/Moopinger/wordlists/tree/main](https://github.com/Moopinger/wordlists/tree/main)
 
 ## Data Removal
-If you find information you would like removed from urlscan.io, you can flag it as sensitive on the their site.
+If you find information you would like removed from urlscan.io, you can flag it as sensitive on their site.
 
