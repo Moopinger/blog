@@ -6,7 +6,7 @@ categories: recon urlscan
 ---
 
 
-![Search banner](/assets/searchbanner.png)
+![Search banner](/blog/assets/searchbanner.png)
 
 It's no secret that [Urlscan.io](https://urlscan.io) can provide valuable target [recon](https://urlscan.io/search/#page.url%3A%40gmail.com) information, [*sometimes even too much information*](https://positive.security/blog/urlscan-data-leaks). And, with the ever growing popularity and number of modules for the template-based scanning tool, [Nuclei](https://github.com/projectdiscovery/nuclei), the importance of reliable site traffic sources has surged, especially so for bug bounty hunters and penetration testers. Urlscan stands out as an exceptional service for recon, and offering an API for both searching and submitting scans.
 
@@ -83,18 +83,18 @@ optional arguments:
 
 `> python3 scan.py -f results/mozilla_com_all_results.json -m list` against our previously generated search file:
 
-![list mode](/assets/listmode.png)
+![list mode](/blog/assets/listmode.png)
 
 
 # -m info
 
 Similarly info mode can be used to return a count of each extension and subdomain within the results.
 
-![info mode domains](/assets/infomode-1.png){: width="400" }
+![info mode domains](/blog/assets/infomode-1.png){: width="400" }
 
 Extenstions:
 
-![info mode domains](/assets/infomode-2.png){: width="300" }
+![info mode domains](/blog/assets/infomode-2.png){: width="300" }
 
 
 # -m scan
@@ -115,7 +115,7 @@ interesting_words = ['sql','api','swagger','tomcat','edit','upload','admin','pas
 
 *And you know it's legit because of the green text ;)*
 
-![Scan](/assets/scan.png)
+![Scan](/blog/assets/scan.png)
 
 ## Wordlist
 
