@@ -74,12 +74,13 @@ optional arguments:
 
   {% endhighlight %}
 
-*single target attack*:
+*Single target attack*:
 
 * `python3 clzero.py -u https://www.target.com/ -c configs/default.py -skipread`
 * `python3 clzero.py -u https://www.target.com/ -c configs/default.py -lb`
 
 *Multi target attack*:
+
 * `python3 clzero.py -l urls.txt -c configs/default.py -skipread`
 * `python3 clzero.py -l urls.txt -c configs/default.py -lb`
  
