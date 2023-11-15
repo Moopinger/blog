@@ -17,7 +17,7 @@ Smuggler uses a single http request, containing the smuggle gadget for detection
 
 ## CLZero
 
-Firstly I would just like to thank @deparam for making such an awesome tool like Smuggler, and @albinowax for all the work he has done in this space. Without them this tool would not be possible. I have tried to keep the running / configuration of CLZero as similar to Smuggler as possible. I have included all the current smuggler attacks for CL.TE attacks and changed them to CL.0 I have also included some of the new techniques from @albinowax. As far as i know [Burp's HTTP Request Smuggler](https://github.com/PortSwigger/http-request-smuggler) covers all these cases.
+Firstly I would just like to thank @defparam for making such an awesome tool like Smuggler, and @albinowax for all the work he has done in this space. Without them this tool would not be possible. I have tried to keep the running / configuration of CLZero as similar to Smuggler as possible. I have included all the current smuggler attacks for CL.TE attacks and changed them to CL.0 I have also included some of the new techniques from @albinowax. As far as i know [Burp's HTTP Request Smuggler](https://github.com/PortSwigger/http-request-smuggler) covers all these cases.
 
 #### Grab a copy here [https://github.com/Moopinger/CLZero/](https://github.com/Moopinger/CLZero/)
 
