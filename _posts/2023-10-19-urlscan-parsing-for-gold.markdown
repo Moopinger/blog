@@ -11,13 +11,13 @@ categories: recon urlscan
 It's no secret that [Urlscan.io](https://urlscan.io) can provide valuable target [recon](https://urlscan.io/search/#page.url%3A%40gmail.com) information, [*sometimes even too much information*](https://positive.security/blog/urlscan-data-leaks). And, with the ever growing popularity and number of modules for the template-based scanning tool, [Nuclei](https://github.com/projectdiscovery/nuclei), the importance of reliable site traffic sources has surged, especially so for bug bounty hunters and penetration testers. Urlscan stands out as an exceptional service for recon, and offering an API for both searching and submitting scans.
 
 
-# *URLScan.io is used by popular recon tools such as [Amass](https://github.com/owasp-amass/amass/) for domain enumeration and [GAU](https://github.com/lc/gau) for url harvesting.*
+#### *URLScan.io is used by popular recon tools such as [Amass](https://github.com/owasp-amass/amass/) for domain enumeration and [GAU](https://github.com/lc/gau) for url harvesting.*
 
 However, when faced with a target domain with more than 500 results, pinpointing sensitive URLs can be daunting. I spent more time than I should have working through large search responses. This prompted me to develop the scripts outlined below, which have saved me quite a bit of time. If your target domain yields fewer than 500 entries, it's more efficient to review the entries manually, either through the Urlscan.io search or using GAU.
 
 A typical [search](https://urlscan.io/search/#*) query might look like `page.domain:(targetdomain.com)`. A more verbose alternative is `domain:(targetdomain.com)` but this will also include redirect URLs, potentially taking you out of your intended scope. For clarity, the scripts provided here exclusively utilize page.domain.
 
-# *The fetch.py and scan.py scripts are located here: [https://github.com/Moopinger/URLScanScripts](https://github.com/Moopinger/URLScanScripts)*
+#### *The fetch.py and scan.py scripts are located here: [https://github.com/Moopinger/URLScanScripts](https://github.com/Moopinger/URLScanScripts)*
 
 ## fetch.py
 
@@ -122,5 +122,6 @@ interesting_words = ['sql','api','swagger','tomcat','edit','upload','admin','pas
 After running this script against a large number of domains with public bounty programs, I compiled a somewhat decent subdomain wordlist (119K). It's available for download at: [https://github.com/Moopinger/wordlists/tree/main](https://github.com/Moopinger/wordlists/tree/main)
 
 ## Data Removal
+
 If you find information you would like removed from urlscan.io, you can flag it as sensitive on their site.
 
