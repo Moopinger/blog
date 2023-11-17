@@ -5,7 +5,7 @@ date:   2023-11-15 10:00:00 +0200
 categories: fuzzing clzero tools request smuggling
 ---
 
-![Fuzz banner](/blog/assets/banner-fuzz.png)
+[Fuzz banner](/assets/banner-fuzz.png)
 
 Last week I read the blogpost ["From Akamai to F5 to NTLM... with love."](https://blog.malicious.group/from-akamai-to-f5-to-ntlm/) by [d3d](https://twitter.com/deadvolvo), it is a great read and you should check it out. In the post d3d drops the hammer on Akamai, via a CL.0 request smuggling technique. 
 
@@ -72,7 +72,7 @@ optional arguments:
   -config CONFIG  (-c) Config file to load, see ./configs/ to create custom payloads
   -method METHOD  (-m) Method to use when sending the smuggle request. Default: POST
 
-  {% endhighlight %}
+{% endhighlight %}
 
 *Single target attack*:
 
