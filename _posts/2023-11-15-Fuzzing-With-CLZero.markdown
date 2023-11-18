@@ -55,7 +55,7 @@ Usage is similar to Smuggler, whereby the user specifies a config file containin
 
 usage: clzero.py [-h] [-url URL] [-file FILE] [-index INDEX] [-verbose] [-no-color] [-resume] [-skipread] [-quiet] [-lb] [-config CONFIG] [-method METHOD]
 
-CLZero by Moopinger
+CLZero by Moopinger - Thanks: Smuggler - @Defparam. @Albinowax. D3d - @deadvolvo
 
 optional arguments:
   -h, --help      show this help message and exit
