@@ -12,5 +12,4 @@ If you want to reach out to me here are some of my links:
 * [Hackerone](https://hackerone.com/moopinger)
 * [Github](https://github.com/Moopinger)
 
-Cheers,
-Charlie
+Cheers
