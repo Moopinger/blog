@@ -114,6 +114,7 @@ Flags:
 
 {% highlight none %}
 
+Usage:
   smugglefuzz request [flags]
 
 Examples:
