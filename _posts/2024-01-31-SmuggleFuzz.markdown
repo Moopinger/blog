@@ -68,6 +68,23 @@ The confirmatory request resubmits the same query that led to the timeout, but w
 
 # Install
 
+```
+go install github.com/moopinger/smugglefuzz@latest
+```
+
+
+Compile yourself:
+
+
+```
+git clone https://github.com/moopinger/smugglefuzz.git
+cd smugglefuzz
+go build .
+./smugglefuzz
+```
+
+
+
 Go to [https://github.com/moopinger/smugglefuzz/](https://github.com/moopinger/smugglefuzz/) for details.
 
 # Usage
