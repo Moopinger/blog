@@ -11,7 +11,7 @@ categories: smugglefuzz fuzzing smuggling
 
 ## Better late than never
 
-2021 was an weird year. As we started to socialy re-engage with our friends and peers, I found myself trying to grasp onto the remnants of my social skills and sanity. Amidst this, some individuals were diligently at work, getting out an important message. [James Kettle](https://twitter.com/albinowax) and [Emile Lerner](https://twitter.com/emil_lerner), in their separate endeavors, explored the intricacies of HTTP/2 downgrade attacks, unveiling their findings at respective conferences. For those yet to delve into the subject of downgrade attacks, read on here:
+2021 was a weird year. As we started to socialy re-engage with our friends and peers, I found myself trying to grasp onto the remnants of my social skills and sanity. Amidst this, some individuals were diligently at work, getting out an important message. [James Kettle](https://twitter.com/albinowax) and [Emile Lerner](https://twitter.com/emil_lerner), in their separate endeavors, explored the intricacies of HTTP/2 downgrade attacks, unveiling their findings at respective conferences. For those yet to delve into the subject of downgrade attacks, read on here:
 
 * [https://portswigger.net/research/http2](https://portswigger.net/research/http2)
 
