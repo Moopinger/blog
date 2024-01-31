@@ -28,7 +28,7 @@ Ever since encountering their research nearly three years ago, I've been driven 
 
 # Wordlist
 
-SmuggleFuzz allows users complete control over requests through custom wordlists. These lists have a basic structure, which should be followed for optimal request handling. For instance, headers and their values are split using a `semicolon and a space (; )` instead of the usual colon, facilitating the inclusion of colon values in smuggling requests. This also opens up possibilities for various mutations and creative approaches. For detailed guidance on creating your own payloads, refer to: PortSwigger's HTTP/2 Research.
+SmuggleFuzz allows users complete control over requests through custom wordlists. These lists have a basic structure, which should be followed for optimal request handling. For instance, headers and their values are split using a `semicolon and a space (; )` instead of the usual colon, facilitating the inclusion of colon values in smuggling requests. This also opens up possibilities for various mutations and creative approaches. For detailed guidance on creating your own payloads, refer to PortSwigger's HTTP/2 Research above.
 
 The tool includes a ready-to-use list of 125 smuggling gadgets, though there's always scope for expansion. These gadgets can be displayed using the 'output' command, providing insights into query structuring. Users can run scans with custom wordlists using the 'w' flag. The list supports URL encoding (%00) for non-printable byte values, such as carriage return and line feed represented as '%0d%0a' or '\r\n'. While the provided list is comprehensive, crafting your own gadgets can significantly enhance success rates.
 
