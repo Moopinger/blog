@@ -30,7 +30,7 @@ Ever since encountering their research, I've been driven to deepen my understand
 
 SmuggleFuzz allows users complete control over requests through custom wordlists. These lists have a basic structure, which should be followed for optimal request handling. For instance, headers and their values are split using a `semicolon and a space (; )` instead of the usual colon, facilitating the inclusion of colon values in smuggling requests. This also opens up possibilities for various mutations and creative approaches. For detailed guidance on creating your own payloads, refer to PortSwigger's HTTP/2 Research above.
 
-The tool includes a ready-to-use list of 125 smuggling gadgets, though there's always scope for expansion. These gadgets can be displayed using the 'output' command, providing insights into query structuring. Users can run scans with custom wordlists using the 'w' flag. The list supports URL encoding (%00) for non-printable byte values, such as carriage return and line feed represented as '%0d%0a' or '\r\n'. While the provided list is comprehensive, crafting your own gadgets can significantly enhance success rates.
+The tool includes a ready-to-use list of 125 smuggling gadgets, though there's always scope for expansion. These gadgets can be displayed using the 'output' command, providing insights into query structuring. Users can run scans with custom wordlists using the 'w' flag. The list supports URL encoding `%00` for non-printable byte values, such as carriage return and line feed represented as `%0d%0a` or `\r\n`. While the provided list is comprehensive, crafting your own gadgets can significantly enhance success rates.
 
 
 
@@ -45,11 +45,14 @@ Pseudo headers are fully supported and can be customized using the ":name" synta
 
 These headers are particularly useful when testing for H2.0 attack vectors. For example, in testing H2.0 smuggling using OAST-based methods, wordlist entries like the following can be effective:
 
-* `:authority; localhost\r\n\r\nGET / HTTP/1.1\r\nHost: uniqid.oastify.com\r\nX-HEADER:%20`
+As of v0.1.8 [HOSTNAME] can be used as a placeholder. SmuggleFuzz will replace this with the hostname at runtime.
+
+* `:authority; [HOSTNAME]\r\n\r\nGET / HTTP/1.1\r\nHost: uniqid.oastify.com\r\nX-HEADER:%20`
 
 or
 
-* `:authority; localhost\r\n\r\nGET https://uniqid.oastify.com/ HTTP/1.1\r\nHost: localhost\r\nX-HEADER:%20`
+* `:authority; [HOSTNAME]\r\n\r\nGET https://uniqid.oastify.com/ HTTP/1.1\r\nHost: [HOSTNAME]\r\nX-HEADER:%20`
+
 
 # Detection
 
@@ -68,6 +71,11 @@ The confirmatory request resubmits the same query that led to the timeout, but w
 
 # Install
 
+Get a copy from [https://github.com/Moopinger/smugglefuzz/releases](https://github.com/Moopinger/smugglefuzz/releases).
+
+# Or,  build yourself
+
+
 ```
 go install github.com/moopinger/smugglefuzz@latest
 ```
@@ -82,8 +90,6 @@ cd smugglefuzz
 go build .
 ./smugglefuzz
 ```
-
-
 
 Go to [https://github.com/moopinger/smugglefuzz/](https://github.com/moopinger/smugglefuzz/) for details.
 
@@ -100,17 +106,19 @@ Usage:
 
 Examples:
 	smugglefuzz scan -u https://example.com/ --confirm
-	smugglefuzz scan -u https://example.com/ --filter 200 --confirm
-	smugglefuzz scan -u https://example.com/ -w wordlist.txt -t 10 --confirm
-	smugglefuzz scan -dc -u https://example.com/ -w wordlist.txt -x PUT --confirm
+	smugglefuzz scan -u https://example.com/ --filter TIMEOUT --confirm
+	smugglefuzz scan -u https://example.com/ -w wordlist.txt -t 10 --confirm --filter TIMEOUT
+	smugglefuzz scan --dc -u https://example.com/ -w wordlist.txt -x PUT --confirm
 
-Multiple Targets:
-	smugglefuzz scan -f multiple_targets.txt --confirm -t 10
-	smugglefuzz scan -f multiple_targets.txt -w wordlist.txt --confirm -s ./save-success.txt
-	smugglefuzz scan -f multiple_targets.txt -w wordlist.txt -H "Cookie: date=...; session=...;" --confirm -s ./save-success.txt -x PUT
+	//Multiple targets? just use -f instead of -u and provide a file with the targets in it:
+
+	smugglefuzz scan -f multiple_targets.txt --confirm -t 10 
+	smugglefuzz scan -f multiple_targets.txt -w wordlist.txt --confirm -s ./save-success.txt --filter TIMEOUT
+	smugglefuzz scan -f multiple_targets.txt -w wordlist.txt -H "Cookie: date=...; session=...;" -s ./save-success.txt -x PUT --filter TIMEOUT
 
 Flags:
   -c, --confirm               Enable this flag to send a confirmation to the target when a timeout is encountered. Helps confirm if the target is vulnerable.
+  -d, --data string           HTTP/2 Data frame to send. eg: 99\r\n (default "99\r\n")
       --dc                    Disable colour in the output. This is useful when you want to save the output to a file.
   -f, --file string           A file containing multiple targets in url format. One target per line.
       --filter string         Filter responses by string or frame type, etc. For example: 405, 200, 502, TIMEOUT, RST, GOAWAY, etc.
@@ -137,10 +145,11 @@ Usage:
 Examples:
 	smugglefuzz request -u https://www.example.com/ -a "content-length\t; 13"
 	smugglefuzz request -u https://www.example.com/ -a "content-length\t; 13" -x PUT
-	smugglefuzz request -u https://www.example.com/ -a "content-length\t; 13" -H "Cookie: date=...; session=...;"
+	smugglefuzz request -u https://www.example.com/ -a "content-length\t; 13" -H "Cookie: date=...; session=...;" --data "223\r\n"
 
 Flags:
   -a, --attack string   Attack Header, separated by (; ) like the wordlist in 'scan' mode.
+  -d, --data string     HTTP/2 Data frame content to send. (default "99\r\n")
       --dc              Disable colour in the output.
   -H, --header string   Insert custom header. eg "Cookie: values"
   -h, --help            help for request
