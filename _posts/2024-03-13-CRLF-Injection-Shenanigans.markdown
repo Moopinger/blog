@@ -15,7 +15,7 @@ The recently unveiled compilation of the ['Top 10 Web Hacking Techniques of 2023
 
 [Sergey Bobrov](https://twitter.com/black2fan?lang=en) unveiled a series of innovative exploitation methods for 'request splitting.' This underscores the notion that hacking often demands not only technical expertise, of which he possesses abundantly, but also a creative mindset. One particularly intriguing technique involves the manipulation of multipart/form-data upload functionality, standing out as my personal favorite among his inventive approaches
 
-Sergey knew that when the message is reassembled by the server backend, the actual POST parameters will be appended to the end. Allowing him to control not just the start of a hijacked request via CRLF, but also the end. Combining this with Multipart requests he knew he could craft a malicious page, that when viewed by a victim would upload the victim's session information to his account signature (or anywhere accepting multipart uploads).
+Sergey knew that when the message is reassembled by the server backend, the actual POST parameters will be appended to the end. Allowing him to control not just the start of a hijacked request via CRLF, but also the end. Combining this with Multipart requests he knew he could craft a malicious page (CSRF), that when viewed by a victim would upload the victim's session information to his account signature (or anywhere accepting multipart uploads).
 
 There is a lot more to [his research and you should check it out.](https://offzone.moscow/upload/iblock/11a/sagouc86idiapdb8f29w41yaupqv6fwv.pdf)
 
