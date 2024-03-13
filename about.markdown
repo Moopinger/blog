@@ -8,7 +8,7 @@ Hi my name is Charlie. Welcome to my blog. I hope you are well. I am a South Afr
 
 If you want to reach out to me here are some of my links:
 
-* [X / Twitter / the Muskies ](https://twitter.com/moopinger)
+* [Mastodon](https://infosec.exchange/@Moopinger)
 * [Hackerone](https://hackerone.com/moopinger)
 * [Github](https://github.com/Moopinger)
 
