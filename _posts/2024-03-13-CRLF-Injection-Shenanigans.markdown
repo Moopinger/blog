@@ -23,7 +23,7 @@ There is a lot more to [his research and you should check it out.](https://offzo
 
 This made me revisit CRLF injection within my own bounty hunting programs, the outcomes exceeded my expectations significantly. The success has been so remarkable that I am compelled to share my insights in this post, complete with my detection methods and the Python script I employed to uncover these vulnerabilities
 
-I used a single HTTP request containing two detection methods, that if successfully triggered will return a different HTTP status code. The first being the method Sergey highlights above by simply stating a nonexistant HTTP Version (HTTP/9).
+I used a single HTTP request containing two detection methods, that if successfully triggered will return a different HTTP status code. The first being the method Sergey highlights above by simply stating a nonexistant HTTP Version (HTTP/13.37).
 
 `https://www.moopinger.com/%20HTTP/9%0D%0Ax-end:%20a`
 
