@@ -35,6 +35,6 @@ The next was a method I have seen because I generated this error often throughou
 
 I have created a python script to automate this, and can be found on my GitHub: [https://github.com/Moopinger/crlf-detection-script.](https://github.com/Moopinger/crlf-detection-script) Just add your targets to hosts.txt and run the Python script - It does not offer multiple routines/threads. And, you are damn right there is green console text.
 
-The script first attempts to conduct the detection over HTTP/2 (You know they are all being downgraded to HTTP/1.1 anyway and may allow additional vulnerable target discovery), and if HTTP/2 is not supported is will switch to HTTP/1.1. This has proven a bit more successful throughout my testing, than just testing over HTTP/1.1.
+The script first attempts to conduct the detection over HTTP/2 (You know they are all being downgraded to HTTP/1.1 anyway and may allow additional vulnerable target discovery), and if HTTP/2 is not supported it will switch to HTTP/1.1. This has proven a bit more successful throughout my testing, than just testing over HTTP/1.1.
 
 I hope the script helps and you are able to rain down some bounties. Once you have identified a vulnerable endpoint, consult the research mentioned above to begin your exploitation journey. Remember, to have a good working PoC when you submit - demonstrate the risk not the vulnerability. 
