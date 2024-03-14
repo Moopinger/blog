@@ -17,7 +17,7 @@ The recently unveiled compilation of the ['Top 10 Web Hacking Techniques of 2023
 
 Sergey knew that when the message is reassembled by the server backend, the actual POST parameters will be appended to the end. Allowing him to control not just the start of a hijacked request via CRLF, but also the end. Combining this with Multipart requests he knew he could craft a malicious page (CSRF), that when viewed by a victim would upload the victim's session information to his account signature (or anywhere accepting multipart uploads). Another amazing part is CSRF-tokens can't save you here.
 
-There is a lot more to [his research and you should check it out.](https://offzone.moscow/upload/iblock/11a/sagouc86idiapdb8f29w41yaupqv6fwv.pdf)
+There is a LOT more to [his research and you should check it out.](https://offzone.moscow/upload/iblock/11a/sagouc86idiapdb8f29w41yaupqv6fwv.pdf)
 
 ## Detection
 
