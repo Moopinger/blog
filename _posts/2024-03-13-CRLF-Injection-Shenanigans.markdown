@@ -31,7 +31,7 @@ Should generate a ["505/HTTP Version Not Supported"](https://developer.mozilla.o
 
 The next was a method I have seen because I generated this error often throughout my smuggle testing- When specifying a nonexistant 'Transfer-Encoding' method the server will respond with ["501 Not Implemented"](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/501) So to trigger this we just include 'Transfer-Encoding: nonexistant' so now we have:
 
-`https://www.moopinger.com/%20HTTP/9%0D%0Transfer-Encoding:%20nonexistant%0D%0Ax-end:%20a`
+`https://www.moopinger.com/%20HTTP/9%0D%0ATransfer-Encoding:%20nonexistant%0D%0Ax-end:%20a`
 
 I have created a python script to automate this, and can be found on my GitHub: [https://github.com/Moopinger/crlf-detection-script.](https://github.com/Moopinger/crlf-detection-script) Just add your targets to hosts.txt and run the Python script - It does not offer multiple routines/threads. And, you are damn right there is green console text.
 
